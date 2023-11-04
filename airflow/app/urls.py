@@ -27,9 +27,9 @@ import airflows.urls
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Aviata API",
+      title="Codeunion API",
       default_version='v1',
-      description="Aviata app",
+      description="Codeunion app",
    ),
    public=True,
    permission_classes=[permissions.AllowAny],
