@@ -24,7 +24,7 @@ python manage.py shell
 CELERY_BEAT_SCHEDULE = {
     'auto_set_currencies': {
         'task': 'airflows.tasks.auto_set_currencies',
-        'schedule': crontab(hour=16, minute=8) #здесь поставте время обновление
+        'schedule': crontab(hour=16, minute=8) #здесь поставте время обновление по Алматы
     }
 }
 ```
