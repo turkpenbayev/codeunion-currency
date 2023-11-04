@@ -18,6 +18,17 @@ python manage.py shell
 >>> User.objects.create_user(username='username', password='userpassword')
 ```
 
+- ***Формат токена: Bearer {access_token}***
+
+```sh
+CELERY_BEAT_SCHEDULE = {
+    'auto_set_currencies': {
+        'task': 'airflows.tasks.auto_set_currencies',
+        'schedule': crontab(hour=16, minute=8) #здесь поставте время обновление
+    }
+}
+```
+
 
 Необходимо создать сервис на языке Python с использованием фреймворка Django, который предоставляет информацию о текущих курсах валют в отношении к тенге (KZT). Ваш сервис должен иметь следующий функционал:
 

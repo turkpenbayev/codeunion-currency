@@ -28,6 +28,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/worker/Dockerfile
+    command: celery -A app worker -l info
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
@@ -43,6 +44,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/beat/Dockerfile
+    command: celery -A app beat -l info
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
